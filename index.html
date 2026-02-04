@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4 – Portfolio Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#todo">To-Do</a>
+  <a href="#products">Products</a>
+</nav>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio" class="portfolio">
+  <div class="hero">
+    <h1>Hi, I’m <span>Aditya Harne</span></h1>
+    <h3>Frontend Web Developer Intern</h3>
+    <p>
+      I build responsive and interactive web applications using
+      HTML, CSS, and JavaScript.
+    </p>
+
+    <div class="hero-buttons">
+      <button onclick="contactMe()">Contact Me</button>
+      <a href="#products" class="btn-outline">View Projects</a>
+    </div>
+  </div>
+
+  <div class="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>DOM Manipulation</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TODO APP ===== -->
+<section id="todo">
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter task">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="taskList"></ul>
+</section>
+
+<!-- ===== PRODUCT LIST ===== -->
+<section id="products">
+  <h2>Products</h2>
+
+  <select onchange="sortProducts(this.value)">
+    <option value="">Sort by Price</option>
+    <option value="low">Low to High</option>
+    <option value="high">High to Low</option>
+  </select>
+
+  <div id="productList"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
